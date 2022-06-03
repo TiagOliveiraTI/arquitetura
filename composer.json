@@ -1,7 +1,11 @@
 {
   "autoload": {
     "psr-4": {
-      "OTaoDev\\Arquitetura\\": "src/",
+      "OTaoDev\\Arquitetura\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "OTaoDev\\Arquitetura\\Tests\\": "tests/"
     }
   },
