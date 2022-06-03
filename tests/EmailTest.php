@@ -14,4 +14,10 @@ class EmailTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         new Email('invalid_email');
     }
+
+    public function testEmailShouldBeRepresentedAsString()
+    {
+        $email = new Email('email@teste.com');
+        $this->assertSame('email@teste.com', (string) $email);
+    }
 }
