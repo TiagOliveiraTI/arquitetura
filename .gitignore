@@ -22,4 +22,5 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 .idea/
-/.phpunit.cache/test-results
+/.phpunit.cache/
+/tests/_reports
