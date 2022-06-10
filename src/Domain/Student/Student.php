@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Student;
+namespace OTaoDev\Arquitetura\Domain\Student;
 
-use OTaoDev\Arquitetura\Cpf;
-use OTaoDev\Arquitetura\Email;
+use OTaoDev\Arquitetura\Domain\Cpf;
+use OTaoDev\Arquitetura\Domain\Email;
 
 class Student
 {

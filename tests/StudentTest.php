@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Tests;
+namespace OTaoDev\Arquitetura\Domain\Domain\Tests;
 
-use OTaoDev\Arquitetura\Student\Student;
+
+use OTaoDev\Arquitetura\Domain\Student\Student;
 
 class StudentTest extends \PHPUnit\Framework\TestCase
 {

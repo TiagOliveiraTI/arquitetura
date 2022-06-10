@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Student;
+namespace OTaoDev\Arquitetura\Domain\Student;
 
 use InvalidArgumentException;
 
