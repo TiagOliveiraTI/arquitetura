@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OTaoDev\Arquitetura\Tests;
 
-use OTaoDev\Arquitetura\Student;
+use OTaoDev\Arquitetura\Student\Student;
 
 class StudentTest extends \PHPUnit\Framework\TestCase
 {
