@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Domain\Domain\Tests;
-
+namespace OTaoDev\Arquitetura\Tests\Domain;
 
 use OTaoDev\Arquitetura\Domain\Email;
 use PHPUnit\Framework\TestCase;
