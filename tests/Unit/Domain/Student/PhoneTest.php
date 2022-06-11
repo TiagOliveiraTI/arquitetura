@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Tests\Domain;
+namespace OTaoDev\Arquitetura\Tests\Unit\Domain\Student;
 
 use InvalidArgumentException;
 use OTaoDev\Arquitetura\Domain\Student\Phone;
