@@ -17,11 +17,12 @@ class StudentWithPdoRepositoryTest extends TestCase
     protected function setUp(): void
     {
         $this->conn = ConnectionCreator::createConnection();
+        $this->conn->beginTransaction();
     }
 
     protected function tearDown(): void
     {
-        $this->conn->exec('DELETE FROM students;');
+        $this->conn->rollBack();
     }
 
     public function testShouldAddAStudent()
