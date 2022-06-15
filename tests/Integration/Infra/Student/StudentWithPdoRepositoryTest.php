@@ -12,23 +12,32 @@ use PDO;
 use OTaoDev\Arquitetura\Infra\Persistence\ConnectionCreator;
 
 class StudentWithPdoRepositoryTest extends TestCase
-{
-    protected PDO $conn;
+{ 
+    protected static PDO $conn;
+    public static function setUpBeforeClass(): void
+    {
+        self::$conn = new PDO('sqlite::memory:');
+        self::$conn->exec(
+            'CREATE TABLE students (
+                cpf TEXT PRIMARY KEY,
+                name TEXT,
+                birth_date TEXT);'
+        );
+        }
     protected function setUp(): void
     {
-        $this->conn = ConnectionCreator::createConnection();
-        $this->conn->beginTransaction();
+       self::$conn->beginTransaction();
     }
 
     protected function tearDown(): void
     {
-        $this->conn->rollBack();
+       self::$conn->rollBack();
     }
 
     public function testShouldAddAStudent()
     {
         $student = Student::withCpfNameAndEmail('123.456.789-14', 'Tiago Oliveira', 'teste2@email.com');
-        $sut = new StudentWithPdoRepository($this->conn);
+        $sut = new StudentWithPdoRepository(self::$conn);
 
         $resp = $sut->add($student);
 
