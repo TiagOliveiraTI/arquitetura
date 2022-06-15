@@ -8,7 +8,7 @@ use OTaoDev\Arquitetura\Domain\Cpf;
 
 interface StudentRepository
 {
-    public function add(Student $student): void;
+    public function add(Student $student): bool;
 
     public function findByCpf(Cpf $cpf): Student;
 

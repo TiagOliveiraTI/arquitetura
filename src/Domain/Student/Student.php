@@ -32,7 +32,7 @@ class Student
         return $this;
     }
 
-    public function cpf(): string
+    public function cpf(): Cpf
     {
         return $this->cpf;
     }
@@ -42,7 +42,7 @@ class Student
         return $this->name;
     }
 
-    public function email(): string
+    public function email(): Email
     {
         return $this->email;
     }
