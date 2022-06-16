@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura;
+namespace OTaoDev\Arquitetura\Domain\Student;
+
+use OTaoDev\Arquitetura\Domain\Cpf;
+use OTaoDev\Arquitetura\Domain\Email;
 
 class Student
 {
@@ -27,5 +30,20 @@ class Student
     {
         $this->phones[] = new Phone($ddd, $number);
         return $this;
+    }
+
+    public function cpf(): Cpf
+    {
+        return $this->cpf;
+    }
+
+    public function name(): string
+    {
+        return $this->name;
+    }
+
+    public function email(): Email
+    {
+        return $this->email;
     }
 }

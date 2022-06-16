@@ -24,3 +24,4 @@ Homestead.json
 .idea/
 /.phpunit.cache/
 /tests/_reports
+mydb.sqlite

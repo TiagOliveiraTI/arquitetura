@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Tests;
+namespace OTaoDev\Arquitetura\Tests\Domain;
 
 use InvalidArgumentException;
-use OTaoDev\Arquitetura\Cpf;
+use OTaoDev\Arquitetura\Domain\Cpf;
 use PHPUnit\Framework\TestCase;
 
 class CpfTest extends TestCase

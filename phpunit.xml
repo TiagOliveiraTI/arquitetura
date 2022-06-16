@@ -11,8 +11,8 @@
          colors="true"
          failOnRisky="true"
          failOnWarning="true"
-         testdox="true"
-         verbose="true">
+         testdox="false"
+         verbose="false">
     <testsuites>
         <testsuite name="default">
             <directory>tests</directory>

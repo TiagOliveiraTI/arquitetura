@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Tests;
+namespace OTaoDev\Arquitetura\Tests\Unit\Domain\Student;
 
 use InvalidArgumentException;
-use OTaoDev\Arquitetura\Phone;
+use OTaoDev\Arquitetura\Domain\Student\Phone;
 use PHPUnit\Framework\TestCase;
 
 class PhoneTest extends TestCase

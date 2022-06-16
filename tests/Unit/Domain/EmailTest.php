@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OTaoDev\Arquitetura\Tests;
+namespace OTaoDev\Arquitetura\Tests\Domain;
 
-use OTaoDev\Arquitetura\Email;
+use OTaoDev\Arquitetura\Domain\Email;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase
