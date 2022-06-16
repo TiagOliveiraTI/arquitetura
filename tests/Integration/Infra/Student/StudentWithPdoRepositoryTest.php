@@ -1,7 +1,6 @@
 <?php
 
-declare(strict_types = 1)
-;
+declare(strict_types=1);
 
 namespace OTaoDev\Arquitetura\Tests\Integration\Infra\Student;
 
@@ -12,7 +11,7 @@ use PDO;
 use OTaoDev\Arquitetura\Infra\Persistence\ConnectionCreator;
 
 class StudentWithPdoRepositoryTest extends TestCase
-{ 
+{
     protected static PDO $conn;
     public static function setUpBeforeClass(): void
     {
@@ -23,15 +22,16 @@ class StudentWithPdoRepositoryTest extends TestCase
                 name TEXT,
                 birth_date TEXT);'
         );
-        }
+    }
+
     protected function setUp(): void
     {
-       self::$conn->beginTransaction();
+        self::$conn->beginTransaction();
     }
 
     protected function tearDown(): void
     {
-       self::$conn->rollBack();
+        self::$conn->rollBack();
     }
 
     public function testShouldAddAStudent()
