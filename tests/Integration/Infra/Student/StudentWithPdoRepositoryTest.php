@@ -16,11 +16,12 @@ class StudentWithPdoRepositoryTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         self::$conn = new PDO('sqlite::memory:');
+        // self::$conn = ConnectionCreator::createConnection();
         self::$conn->exec(
-            'CREATE TABLE students (
+            'CREATE TABLE IF NOT EXISTS students (
                 cpf TEXT PRIMARY KEY,
                 name TEXT,
-                birth_date TEXT);'
+                email TEXT);'
         );
     }
 
@@ -42,5 +43,21 @@ class StudentWithPdoRepositoryTest extends TestCase
         $resp = $sut->add($student);
 
         static::assertTrue($resp);
+    }
+
+    public function testShouldListAllAStudents()
+    {
+        $student = Student::withCpfNameAndEmail('123.456.789-14', 'Tiago Oliveira', 'teste2@email.com');
+        $sut = new StudentWithPdoRepository(self::$conn);
+        $sut->add($student);
+
+        $student = Student::withCpfNameAndEmail('123.456.789-10', 'Arthur Oliveira', 'teste@email.com');
+        $sut = new StudentWithPdoRepository(self::$conn);
+        $sut->add($student);
+
+        $resp = $sut->findAll();
+
+        static::assertCount(2, $resp);
+        static::assertIsArray($resp);
     }
 }
